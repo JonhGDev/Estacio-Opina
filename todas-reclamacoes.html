@@ -9,7 +9,7 @@
 <body>
     <h1>Todas as Reclamações Enviadas</h1>
     
-    <!-- Campo de entrada de senha -->
+    
     <div id="senha-container">
         <label for="senha">Digite a senha para responder:</label>
         <input type="password" id="senha" />
@@ -19,19 +19,19 @@
     <section id="lista-reclamacoes">
         <h2>Reclamações:</h2>
         <ul id="reclamacoes-lista">
-            <!-- As reclamações serão inseridas aqui -->
+            
         </ul>
     </section>
 
     <button onclick="window.location.href='reclamacoes_resolvidas.html'" style="display:none;" id="btn-reclamacoes-resolvidas">Ver Reclamações Resolvidas</button>
 
     <script>
-        const senhaCorreta = "suaSenha"; // Defina aqui a senha correta
+        const senhaCorreta = "suaSenha"; 
 
         document.getElementById('validar-senha').onclick = function() {
             const senha = document.getElementById('senha').value;
             if (senha === senhaCorreta) {
-                // Mostrar os botões "Responder" após validação
+               
                 const buttons = document.querySelectorAll('.btn-responder');
                 buttons.forEach(button => button.style.display = 'inline');
                 document.getElementById('btn-reclamacoes-resolvidas').style.display = 'block';
@@ -51,11 +51,11 @@
                     const li = document.createElement('li');
                     li.textContent = `Área: ${reclamacao.area} - Reclamação: ${reclamacao.reclamacao}`;
                     
-                    // Botão para responder à reclamação
+                
                     const btnResponder = document.createElement('button');
                     btnResponder.textContent = 'Responder';
-                    btnResponder.className = 'btn-responder'; // Classe para facilitar a seleção
-                    btnResponder.style.display = 'none'; // Ocultar inicialmente
+                    btnResponder.className = 'btn-responder';
+                    btnResponder.style.display = 'none'; 
                     btnResponder.onclick = () => responderReclamacao(index);
                     
                     li.appendChild(btnResponder);
@@ -70,9 +70,9 @@
             
             const resposta = prompt(`Responder à reclamação: ${reclamacao.reclamacao}`);
             if (resposta) {
-                // Aqui você pode salvar a resposta no localStorage ou em um banco de dados
+            
                 alert(`Resposta enviada: ${resposta}`);
-                // Para simplicidade, não estamos armazenando a resposta neste exemplo.
+               
             }
         }
 
