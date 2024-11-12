@@ -1,17 +1,19 @@
 <?php
     $dbHost = 'LocalHost';
     $dbUserName = 'root';
-    $dbsenha = '';
-    $dbName = 'mydb';
+    $dbPassword = '';
+    $dbName = 'formulario_opinioes';
     
 
-    $conexao = new mysqli($dbHost,$dbUserName,$dbsenha,$dbName);
+    $conexao = new mysqli($dbHost,$dbUserName,$dbPassword,$dbName);
+
     //if ($conexao->connect_errno) 
     //{
-   //     echo "erro"; 
+    //   echo "erro"; 
    //}
 
     //else
     //{
-    //    echo "Conectado";
+   //    echo "Conectado";
    //}
+?>
