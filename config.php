@@ -2,7 +2,7 @@
     $dbHost = 'LocalHost';
     $dbUserName = 'root';
     $dbPassword = '';
-    $dbName = 'formulario_opinioes';
+    $dbName = 'estacio_opina';
     
 
     $conexao = new mysqli($dbHost,$dbUserName,$dbPassword,$dbName);

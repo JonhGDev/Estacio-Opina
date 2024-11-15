@@ -1,3 +1,45 @@
+<?php
+
+    if(isset($_POST['reclamacoes']))
+    {
+
+        include_once('config.php');
+
+        $tipo = $_POST['tipo_opina'];
+        $descricao = $_POST['descricao'];
+        
+
+        $result = mysqli_query($conexao, "INSERT INTO reclamacoes(tipo_reclamacoes,descicao_reclamacoes) VALUES ('$tipo','$descricao')");
+    }
+
+    
+    if(isset($_POST['elogios']))
+    {
+
+        include_once('config.php');
+
+        $tipo = $_POST['tipo_opina'];
+        $descricao = $_POST['descricao'];
+        
+
+        $result = mysqli_query($conexao, "INSERT INTO elogios(tipo_elogios,descicao_elogios) VALUES ('$tipo','$descricao')");
+    }
+
+    
+    if(isset($_POST['ideias']))
+    {
+
+        include_once('config.php');
+
+        $tipo = $_POST['tipo_opina'];
+        $descricao = $_POST['descricao'];
+        
+
+        $result = mysqli_query($conexao, "INSERT INTO reclamacoes(tipo_ideias,descicao_ideias) VALUES ('$tipo','$descricao')");
+    }
+
+?>
+
 
 
 <!DOCTYPE html>
@@ -64,7 +106,7 @@
             </div>
 
             <div id="feedback-content" class="hidden flex flex-col items-center">
-                <select name="tipo" id="feedback-select" class="w-full mb-4 p-2 border border-gray-300 rounded">
+                <select name="tipo_opina" id="feedback-select" class="w-full mb-4 p-2 border border-gray-300 rounded">
                     <option value="">Selecione um tipo</option>
                     <option value="infraestrutura">Infraestrutura</option>
                     <option value="professor">Professor</option>
@@ -72,8 +114,8 @@
                     <option value="financeiro">Financeiro</option>
                     <option value="plataformas">Plataformas</option>
                 </select>
-                <textarea id="feedback-text" placeholder="Descreva seu feedback..." class="w-full h-24 bg-blue-50 border border-blue-200 rounded-lg p-2 text-gray-700"></textarea>
-                <button type="submit" name="enviar" onclick="enviarFeedback()" class="bg-blue-600 w-full py-2 rounded-lg mt-4 text-white hover:bg-blue-500">Enviar feedback</button>
+                <textarea id="feedback-text" name="descricao" placeholder="Descreva seu feedback..." class="w-full h-24 bg-blue-50 border border-blue-200 rounded-lg p-2 text-gray-700"></textarea>
+                <button type="submit" name="submit" onclick="enviarFeedback()" class="bg-blue-600 w-full py-2 rounded-lg mt-4 text-white hover:bg-blue-500">Enviar feedback</button>
             </div>
         </div>
     </div>
