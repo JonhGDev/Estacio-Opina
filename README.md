@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `reclamacoes` (
   `descricao_reclamacoes` varchar(255) NOT NULL,
   PRIMARY KEY (`id_reclamacoes`),
   KEY `matricula` (`matricula`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Despejando dados para a tabela `reclamacoes`
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `senha` (`senha`),
   UNIQUE KEY `matricula` (`matricula`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Despejando dados para a tabela `usuario`
